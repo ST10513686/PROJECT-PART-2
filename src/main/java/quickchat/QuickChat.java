@@ -21,7 +21,9 @@ public class QuickChat {
             System.out.println("Login failed. Exiting QuickChat.");
             scanner.close();
             return;
+            
         }
+        
         System.out.println("");
 
         int numMessages = 0;
