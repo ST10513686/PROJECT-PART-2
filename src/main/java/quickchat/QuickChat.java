@@ -35,6 +35,7 @@ public class QuickChat {
                 System.out.println("Please enter a number greater than 0.");
             } catch (NumberFormatException e) {
                 System.out.println("Invalid input. Please enter a whole number.");
+                
             }
         }
 
