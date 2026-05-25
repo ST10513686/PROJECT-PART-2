@@ -1,18 +1,8 @@
 package quickchat;
 
-/*
-*
-@author Ntatiso
-*
-*/
-
-import java.util.Scanner;
-import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import org.junit.BeforeClass;
 
 public class MessageTest {
 
@@ -26,22 +16,10 @@ public class MessageTest {
     private Message message1;
     private Message message2;
 
-    @BeforeClass
-    public static void setUpClass() throws Exception {
-    }
-
-    @AfterClass
-    public static void tearDownClass() throws Exception {
-    }
-
     @Before
     public void setUp() {
         message1 = new Message(Message.generateMessageID(), 1, RECIPIENT_1, MESSAGE_TEXT_1);
         message2 = new Message(Message.generateMessageID(), 2, RECIPIENT_2, MESSAGE_TEXT_2);
-    }
-
-    @After
-    public void tearDown() throws Exception {
     }
 
     @Test
@@ -141,196 +119,5 @@ public class MessageTest {
         Message m = new Message(Message.generateMessageID(), 0, RECIPIENT_1, MESSAGE_TEXT_1);
         m.SentMessage(1);
         assertEquals(before + 1, Message.returnTotalMessages());
-    }
-
-    /**
-     * Test of checkMessageID method, of class Message.
-     */
-    @Test
-    public void testCheckMessageID() {
-        System.out.println("checkMessageID");
-        Message instance = null;
-        boolean expResult = false;
-        boolean result = instance.checkMessageID();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of checkRecipientCell method, of class Message.
-     */
-    @Test
-    public void testCheckRecipientCell() {
-        System.out.println("checkRecipientCell");
-        Message instance = null;
-        String expResult = "";
-        String result = instance.checkRecipientCell();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of createMessageHash method, of class Message.
-     */
-    @Test
-    public void testCreateMessageHash() {
-        System.out.println("createMessageHash");
-        Message instance = null;
-        String expResult = "";
-        String result = instance.createMessageHash();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of checkMessageLength method, of class Message.
-     */
-    @Test
-    public void testCheckMessageLength() {
-        System.out.println("checkMessageLength");
-        Message instance = null;
-        String expResult = "";
-        String result = instance.checkMessageLength();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of SentMessage method, of class Message.
-     */
-    @Test
-    public void testSentMessage() {
-        System.out.println("SentMessage");
-        int choice = 0;
-        Message instance = null;
-        String expResult = "";
-        String result = instance.SentMessage(choice);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of printMessages method, of class Message.
-     */
-    @Test
-    public void testPrintMessages() {
-        System.out.println("printMessages");
-        String expResult = "";
-        String result = Message.printMessages();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of storeMessage method, of class Message.
-     */
-    @Test
-    public void testStoreMessage() {
-        System.out.println("storeMessage");
-        Message instance = null;
-        instance.storeMessage();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of generateMessageID method, of class Message.
-     */
-    @Test
-    public void testGenerateMessageID() {
-        System.out.println("generateMessageID");
-        String expResult = "";
-        String result = Message.generateMessageID();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of sendMessageFlow method, of class Message.
-     */
-    @Test
-    public void testSendMessageFlow() {
-        System.out.println("sendMessageFlow");
-        Scanner scanner = null;
-        Message.sendMessageFlow(scanner);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of getMessageID method, of class Message.
-     */
-    @Test
-    public void testGetMessageID() {
-        System.out.println("getMessageID");
-        Message instance = null;
-        String expResult = "";
-        String result = instance.getMessageID();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of getRecipient method, of class Message.
-     */
-    @Test
-    public void testGetRecipient() {
-        System.out.println("getRecipient");
-        Message instance = null;
-        String expResult = "";
-        String result = instance.getRecipient();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of getMessageText method, of class Message.
-     */
-    @Test
-    public void testGetMessageText() {
-        System.out.println("getMessageText");
-        Message instance = null;
-        String expResult = "";
-        String result = instance.getMessageText();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of getMessageHash method, of class Message.
-     */
-    @Test
-    public void testGetMessageHash() {
-        System.out.println("getMessageHash");
-        Message instance = null;
-        String expResult = "";
-        String result = instance.getMessageHash();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of getMessageNumber method, of class Message.
-     */
-    @Test
-    public void testGetMessageNumber() {
-        System.out.println("getMessageNumber");
-        Message instance = null;
-        int expResult = 0;
-        int result = instance.getMessageNumber();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 }
